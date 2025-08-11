@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .quiz-container {
+            width: 400px;
+            margin: 20px auto;
+            border: white;
+            padding: 15px;
+            background-color: gray;
+        }
+
+        .choices-container {
+            margin-top: 10px;
+        }
+
+        .choice {
+            display: flex;
+            margin-bottom: 8px;
+            background-color: white;
+            border: white;
+            padding: 5px;
+        }
+
+        .choice-button {
+            width: 40px;
+            height: 40px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .choice-image {
+            flex: 1;
+            background-color: white;
+            text-align: center;
+            line-height: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h3>Practice Quiz Question</h3>
+
+    <div class="choices-container">
+        <div class="choice" id="choice1">
+            <div class="choice-button">A</div>
+            <div class="choice-image">Image 1</div>
+        </div>
+        <div class="choice" id="choice2">
+            <div class="choice-button">B</div>
+            <div class="choice-image">Image 2</div>
+        </div>
+        <div class="choice" id="choice3">
+            <div class="choice-button">C</div>
+            <div class="choice-image">Image 3</div>
+        </div>
+        <div class="choice" id="choice4">
+            <div class="choice-button">D</div>
+            <div class="choice-image">Image 4</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
