@@ -53,23 +53,43 @@
 
     <div class="choices-container">
         <div class="choice" id="choice1">
-            <div class="choice-button">A</div>
+            <div class="choice-button"id="choice-image1">A</div>
             <div class="choice-image">Image 1</div>
         </div>
         <div class="choice" id="choice2">
-            <div class="choice-button">B</div>
+            <div class="choice-button" id="choice-image2">B</div>
             <div class="choice-image">Image 2</div>
         </div>
         <div class="choice" id="choice3">
-            <div class="choice-button">C</div>
+            <div class="choice-button" id="choice-image3">C</div>
             <div class="choice-image">Image 3</div>
         </div>
         <div class="choice" id="choice4">
-            <div class="choice-button">D</div>
+            <div class="choice-button" id="choice-image4">D</div>
             <div class="choice-image">Image 4</div>
         </div>
     </div>
 </div>
+
+    <script>
+var chosen = false
+document.getElementById("choice1").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image1").innerText = "X"; });
+	chosen = true;
+document.getElementById("choice2").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image2").innerText = "X"; });
+	chosen = true;
+document.getElementById("choice3").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image3").innerText = "O"; });
+	chosen = true;
+document.getElementById("choice4").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image4").innerText = "X"; });
+	chosen = true;
+    </script>
 
 </body>
 </html>
