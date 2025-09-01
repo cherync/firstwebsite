@@ -1,0 +1,23 @@
+{
+  "name": "sample-website",
+  "version": "1.0.0",
+  "description": "Korean American History quiz",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherync/firstwebsite.git"
+  },
+  "author": "Cheryn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cherync/firstwebsite/issues"
+  },
+  "homepage": "https://github.com/cherync/firstwebsite#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
