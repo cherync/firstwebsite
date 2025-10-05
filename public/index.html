@@ -1,20 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>PRACTICE</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Korean American History Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .intro {
+      margin: 30px auto;
+      max-width: 600px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .quiz-buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #0066cc;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d99;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background-color: #eee;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-<h1>This page</h1>
-<h2>Section 1</h2>
-<h3>Subsection 1</h3>
-<h6>Here is the text of the webpage.
-<p> A new paragraph.
-<img src="pexels-photo-1108099.webp"
-width=800>
-<a href ="2nd.html">2nd page</a>
-<a href ="3rdwebpage.html">3rd page</a>
-<a href ="4thwebpage.html">4th page</a>
-<a href ="5thwebpage.html">5th page</a>
-</h6>
+  <header>
+    <h1>Korean American History Quiz</h1>
+    <p>Learn & Test Your Knowledge about the history of Korean and America</p>
+  </header>
+
+  <div class="intro">
+    <p>Welcome! This website is here to help you explore and test your knowledge of Korean American history.  
+       Choose a quiz below to get started:</p>
+  </div>
+
+  <div class="quiz-buttons">
+    <a href="q01.html"><button onclick="alert('Start Beginner Quiz')">Beginner Quiz</button></a>
+    <button onclick="alert('Start Intermediate Quiz')">Intermediate Quiz</button>
+    <button onclick="alert('Start Advanced Quiz')">Advanced Quiz</button>
+  </div>
+
 </body>
 </html>
