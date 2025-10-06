@@ -22,3 +22,44 @@ app.set('view engine', 'ejs');
 // Define the directory where your EJS files (views) are located
 // By default, Express looks for a 'views' directory in the root of your project
 app.set('views', path.join(__dirname, 'views'));
+
+
+  app.get('/ejs1', (req, res) => {
+        res.render('ejsBlog1', { 
+            title: 'First snippet', 
+            message: 'From the blog' 
+        });
+    });
+
+
+  app.get('/ejs2', (req, res) => {
+        res.render('ejsBlog2', { 
+            title: 'First snippet', 
+            message: 'From the blog' 
+        });
+    });
+
+
+  app.get('/ejs5', (req, res) => {
+        res.render('ejsBlog5', { 
+            title: 'First snippet', 
+            message: 'From the blog' 
+        });
+    });
+
+
+  app.get('/ejs6', (req, res) => {
+        res.render('ejsBlog6', { 
+            title: 'First snippet', 
+            message: 'From the blog' 
+        });
+    });
+
+
+  app.get('/ejs7', (req, res) => {
+        res.render('ejsBlog7', { 
+            title: 'First snippet', 
+            message: 'From the blog' 
+        });
+    });
+

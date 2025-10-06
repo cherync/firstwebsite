@@ -1,0 +1,17 @@
+
+<table class="table">
+  <thead>
+     <tr>
+        <th>Sl. No.</th>
+         <th>Common Tags</th>
+     </tr>
+  </thead>
+  <tbody>
+   <% tabledata.forEach((e) => { %>
+     <tr>
+       <td><%=e.col1%></td>
+       <td><%=e.col2%></td>
+     </tr>
+   <% }) %>
+  </tbody>
+</table>
