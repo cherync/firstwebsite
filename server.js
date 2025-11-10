@@ -60,7 +60,7 @@ let tableItems = [
     {col1:'2',col2:'<%- %>'},
     {col1:'3',col2:'<% %>'},
     {col1:'4', col2: '<% %>'}
-
+];
 
   app.get('/ejs7', (req, res) => {
         res.render('ejsBlog7', { title: "<%= EJS100 %>", name: "Sagun",tabledata : tableItems

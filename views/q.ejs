@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .quiz-container {
+            width: 400px;
+            margin: 20px auto;
+            border: white;
+            padding: 15px;
+            background-color: gray;
+        }
+
+        .choices-container {
+            margin-top: 10px;
+        }
+
+        .choice {
+            display: flex;
+            margin-bottom: 8px;
+            background-color: white;
+            border: white;
+            padding: 5px;
+        }
+
+        .choice-button {
+            width: 40px;
+            height: 40px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .choice-image {
+            flex: 1;
+            background-color: white;
+            text-align: center;
+            line-height: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h3>The first large group of Korean immigrants arrived in the US in 1903 to work mainly on which US territory's plantations?</h3>
+
+    <div class="choices-container">
+        <div class="choice" id="choice1">
+            <div class="choice-button"id="choice-image1">A</div>
+            <div class="choice-image">California</div>
+        </div>
+        <div class="choice" id="choice2">
+            <div class="choice-button" id="choice-image2">B</div>
+            <div class="choice-image">Texas</div>
+        </div>
+        <div class="choice" id="choice3">
+            <div class="choice-button" id="choice-image3">C</div>
+            <div class="choice-image">Hawaii</div>
+        </div>
+        <div class="choice" id="choice4">
+            <div class="choice-button" id="choice-image4">D</div>
+            <div class="choice-image">Florida</div>
+        </div>
+    </div>
+</div>
+
+    <script>
+var chosen = false;
+document.getElementById("choice1").addEventListener("click", function () {
+	if (chosen) {return;} 
+        document.getElementById("choice-image1").innerText = "X";
+	chosen = true; });
+document.getElementById("choice2").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image2").innerText = "X";
+	chosen = true; });
+document.getElementById("choice3").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image3").innerText = "O";
+	chosen = true; });
+document.getElementById("choice4").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image4").innerText = "X";
+	chosen = true; });
+    </script>
+<a href ="q02.html">NEXT</a>
+
+</body>
+</html>

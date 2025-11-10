@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="questions.js"></script>
+    <title>Quiz Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .quiz-container {
+            width: 400px;
+            margin: 20px auto;
+            border: white;
+            padding: 15px;
+            background-color: gray;
+        }
+
+        .choices-container {
+            margin-top: 10px;
+        }
+
+        .choice {
+            display: flex;
+            margin-bottom: 8px;
+            background-color: white;
+            border: white;
+            padding: 5px;
+        }
+
+        .choice-button {
+            width: 40px;
+            height: 40px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .choice-image {
+            flex: 1;
+            background-color: white;
+            text-align: center;
+            line-height: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h3><div id="q"></div></h3>
+
+    <div class="choices-container">
+        <div class="choice" id="choice1">
+            <div class="choice-button"id="choice-image1">A</div>
+            <div class="choice-image">Los Angeles, CA</div>
+        </div>
+        <div class="choice" id="choice2">
+            <div class="choice-button" id="choice-image2">B</div>
+            <div class="choice-image">San Francisco, CA</div>
+        </div>
+        <div class="choice" id="choice3">
+            <div class="choice-button" id="choice-image3">C</div>
+            <div class="choice-image">Riverside, CA</div>
+        </div>
+        <div class="choice" id="choice4">
+            <div class="choice-button" id="choice-image4">D</div>
+            <div class="choice-image">Portland, Oregon</div>
+        </div>
+    </div>
+</div>
+
+    <script>
+document.getElementById("q").innerHTML = x01["question"];
+document.getElementById("A").innerHTML = x01["answers"]["A"];
+document.getElementById("B").innerHTML = x01["answers"]["B"];
+document.getElementById("C").innerHTML = x01["answers"]["C"];
+document.getElementById("D").innerHTML = x01["answers"]["D"];
+var chosen = false
+document.getElementById("choice1").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image1").innerText = "X"; });
+	chosen = true;
+document.getElementById("choice2").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image2").innerText = "X"; });
+	chosen = true;
+document.getElementById("choice3").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image3").innerText = "O"; });
+	chosen = true;
+document.getElementById("choice4").addEventListener("click", function () {
+	if (chosen) {return;}
+        document.getElementById("choice-image4").innerText = "X"; });
+	chosen = true;
+    </script>
+<a href ="q03.html">NEXT</a>
+
+</body>
+</html>
