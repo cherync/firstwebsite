@@ -81,19 +81,34 @@ document.getElementById("D").innerHTML = x01["answers"]["D"];
 var chosen = false
 document.getElementById("choice1").addEventListener("click", function () {
 	if (chosen) {return;}
-        document.getElementById("choice-image1").innerText = "X"; });
+	if (x01["correct"]=="A")
+        {document.getElementById("choice-image1").innerText = "O";} });
+	else
+	{document.getElementById("choice-image1").innerText = "X";}
 	chosen = true;
+
 document.getElementById("choice2").addEventListener("click", function () {
 	if (chosen) {return;}
-        document.getElementById("choice-image2").innerText = "X"; });
+	if (x01["correct"]=="A")
+        {document.getElementById("choice-image2").innerText = "O";} });
+	else
+	{document.getElementById("choice-image2").innerText = "X";}
 	chosen = true;
+
 document.getElementById("choice3").addEventListener("click", function () {
 	if (chosen) {return;}
-        document.getElementById("choice-image3").innerText = "O"; });
+	if (x01["correct"]=="B")
+        {document.getElementById("choice-image3").innerText = "O";} });
+	else 
+	{document.getElementById("choice-image3").innerText = "X";} });
 	chosen = true;
+
 document.getElementById("choice4").addEventListener("click", function () {
 	if (chosen) {return;}
-        document.getElementById("choice-image4").innerText = "X"; });
+	if (x01["correct"]=="A")
+        {document.getElementById("choice-image4").innerText = "O";} });
+	else
+	{document.getElementById("choice-image4").innerText = "X";}
 	chosen = true;
     </script>
 <a href ="q03.html">NEXT</a>
