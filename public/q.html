@@ -73,15 +73,17 @@
 </div>
 
     <script>
-document.getElementById("q").innerHTML = x01["question"];
-document.getElementById("A").innerHTML = x01["answers"]["A"];
-document.getElementById("B").innerHTML = x01["answers"]["B"];
-document.getElementById("C").innerHTML = x01["answers"]["C"];
-document.getElementById("D").innerHTML = x01["answers"]["D"];
+let a=Math.floor(Math.random() * 20);
+let y=x[a];
+document.getElementById("q").innerHTML = y["question"];
+document.getElementById("A").innerHTML = y["answers"]["A"];
+document.getElementById("B").innerHTML = y["answers"]["B"];
+document.getElementById("C").innerHTML = y["answers"]["C"];
+document.getElementById("D").innerHTML = y["answers"]["D"];
 var chosen = false
 document.getElementById("choice1").addEventListener("click", function () {
 	if (chosen) {return;}
-	if (x01["correct"]=="A")
+	if (y["correct"]=="A")
         {document.getElementById("choice-image1").innerText = "O";} 
 	else
 	{document.getElementById("choice-image1").innerText = "X";}
@@ -89,7 +91,7 @@ document.getElementById("choice1").addEventListener("click", function () {
 
 document.getElementById("choice2").addEventListener("click", function () {
 	if (chosen) {return;}
-	if (x01["correct"]=="B")
+	if (y["correct"]=="B")
         {document.getElementById("choice-image2").innerText = "O";} 
 	else
 	{document.getElementById("choice-image2").innerText = "X";}
@@ -97,7 +99,7 @@ document.getElementById("choice2").addEventListener("click", function () {
 
 document.getElementById("choice3").addEventListener("click", function () {
 	if (chosen) {return;}
-	if (x01["correct"]=="C")
+	if (y["correct"]=="C")
         {document.getElementById("choice-image3").innerText = "O";} 
 	else 
 	{document.getElementById("choice-image3").innerText = "X";} 
@@ -105,7 +107,7 @@ document.getElementById("choice3").addEventListener("click", function () {
 
 document.getElementById("choice4").addEventListener("click", function () {
 	if (chosen) {return;}
-	if (x01["correct"]=="D")
+	if (y["correct"]=="D")
         {document.getElementById("choice-image4").innerText = "O";}
 	else
 	{document.getElementById("choice-image4").innerText = "X";}
