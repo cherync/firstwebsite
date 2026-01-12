@@ -1,3 +1,5 @@
+Let x = new Array (41)
+
 x[01] = {question : "What writing system is used for the Korean language?",
 answers : {A : "Kanji",
     B : "Hiragana",
@@ -59,7 +61,7 @@ answers : {A : "Alphabet memorization",
     B : "Honorifics and speech levels",
     C : "Pronunciation only",
     D : "Vocabulary size"},
-correct : "B"}
+correct : "D"}
 
 x[10] = {question : "What direction is Hangul written?",
 answers : {A : "Right to left",
