@@ -1,4 +1,4 @@
-Let x = new Array (41)
+let x = new Array (41)
 
 x[01] = {question : "What writing system is used for the Korean language?",
 answers : {A : "Kanji",
