@@ -6,7 +6,7 @@ answers : {A : "Florida",
     D : "Hawaii"},
 correct : "D"}
 
-x[2] = {question : "In 1913, Korean immigrants established a farming community called \"Pachappa\" Camp," considered the first Korean settlement in the mainland US. Where was it located?",
+x[2] = {question : "In 1913, Korean immigrants established a farming community called \"Pachappa Camp,\" considered the first Korean settlement in the mainland US. Where was it located?",
 answers : {A : "Los Angeles, CA",
     B : "San Francisco, CA",
     C : "Riverside, CA",
