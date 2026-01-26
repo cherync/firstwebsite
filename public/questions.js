@@ -1,4 +1,4 @@
-let x=new Array(21);
+let x=new Array(41);
 x[1] = {question : "The first large group of Korean immigrants arrived in the US in 1903 to work mainly on which US territory's plantations?",
 answers : {A : "Florida",
     B : "California",
@@ -138,3 +138,143 @@ answers : {A : "They served mainly as historic museums",
     C : "They operated as government immigration offices",
     D : "They only provided Korean-language classes"},
 correct : "B"}
+
+x[21] = {question : "What is a common stereotype Korean-Americans challenge?",
+answers : {A : "Lazy",
+    B : "Emotionless",
+    C : "Overachieving",
+    D : "Uneducated"},
+correct : "C"}
+
+x[22] = {question : "What does maintaining Korean language help preserve?",
+answers : {A : "Accent",
+    B : "Cultural identity",
+    C : "Citizenship",
+    D : "Religion"},
+correct : "B"}
+
+x[23] = {question : "What is a major contribution of Korean-Americans?",
+answers : {A : "Technology only",
+    B : "Small businesses",
+    C : "Sports only",
+    D : "Agriculture"},
+correct : "B"}
+
+x[24] = {question : "What is often expected of children in Korean-American households?",
+answers : {A : "Part-time work",
+    B : "Academic focus",
+    C : "Early independence",
+    D : "Political activism"},
+correct : "B"}
+
+x[25] = {question : "Which city is known for a large Koreatown?",
+answers : {A : "Chicago",
+    B : "Los Angeles",
+    C : "Seattle",
+    D : "Boston"},
+correct : "B"}
+
+x[26] = {question : "What cultural concept emphasizes family reputation?",
+answers : {A : "Jeong",
+    B : "Kibun",
+    C : "Chemyeon",
+    D : "Han"},
+correct : "C"}
+
+x[27] = {question : "What is 'jeong'?",
+answers : {A : "Anger",
+    B : "Emotional bond and affection",
+    C : "Respect",
+    D : "Pride"},
+correct : "B"}
+
+x[28] = {question : "What is a common identity experience for Korean-Americans?",
+answers : {A : "Choosing one culture only",
+    B : "Balancing two cultures",
+    C : "Rejecting Korean culture",
+    D : "Rejecting American culture"},
+correct : "B"}
+
+x[29] = {question : "Why are Korean schools (hangul schools) important?",
+answers : {A : "They teach math",
+    B : "They preserve language and culture",
+    C : "They replace public school",
+    D : "They teach religion"},
+correct : "B"}
+
+x[30] = {question : "What does Korean-American identity often include?",
+answers : {A : "Only Korean traditions",
+    B : "Only American traditions",
+    C : "A blend of both cultures",
+    D : "Neither culture"},
+correct : "C"}
+
+x[31] = {question : "Korean-American cuisine developed primarily as a result of",
+answers : {A : "Tourism to Korea",
+    B : "Korean immigration to the United States",
+    C : "American colonization of Korea",
+    D : "International trade agreements"},
+correct : "B"}
+
+x[32] = {question : "Which dish is an example of Korean-American fusion cuisine?",
+answers : {A : "Bibimbap",
+    B : "Tteokbokki",
+    C : "Korean tacos",
+    D : "Doenjang jjigae"},
+correct : "C"}
+
+x[33] = {question : "Korean barbecue restaurants in the U.S. often differ from those in Korea because they",
+answers : {A : "Do not use grills",
+    B : "Emphasize premium meats and table-side grilling",
+    C : "Serve only vegetarian food",
+    D : "Do not offer side dishes"},
+correct : "B"}
+
+x[34] = {question : "Which ingredient is central to many Korean-American dishes?",
+answers : {A : "Soy sauce",
+    B : "Cheese",
+    C : "Kimchi",
+    D : "Olive oil"},
+correct : "C"}
+
+x[35] = {question : "Why has kimchi become popular in mainstream American cuisine?",
+answers : {A : "It is inexpensive to make",
+    B : "It aligns with health and probiotic food trends",
+    C : "It is sweet in flavor",
+    D : "It replaces all vegetables"},
+correct : "B"}
+
+x[36] = {question : "What role did Korean-owned restaurants play in the U.S.?",
+answers : {A : "Limiting Korean food exposure",
+    B : "Promoting Korean culture and cuisine",
+    C : "Serving only Korean customers",
+    D : "Eliminating traditional recipes"},
+correct : "B"}
+
+x[37] = {question : "Which food best represents the blending of Korean and American flavors?",
+answers : {A : "Bulgogi cheesesteak",
+    B : "Japchae",
+    C : "Kimchi jjigae",
+    D : "Gimbap"},
+correct : "A"}
+
+x[38] = {question : "Korean-American cuisine reflects which cultural process?",
+answers : {A : "Isolation",
+    B : "Cultural erasure",
+    C : "Assimilation and preservation",
+    D : "Global uniformity"},
+correct : "C"}
+
+x[39] = {question : "How has social media influenced Korean-American cuisine?",
+answers : {A : "Reduced restaurant popularity",
+    B : "Limited fusion dishes",
+    C : "Increased visibility and popularity",
+    D : "Discouraged experimentation"},
+correct : "C"}
+
+x[40] = {question : "Why is food important in Korean-American family culture?",
+answers : {A : "It replaces language learning",
+    B : "It is mainly ceremonial",
+    C : "It strengthens family bonds and cultural identity",
+    D : "It is only for holidays"},
+correct : "C"}
