@@ -6,6 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+	    text-align: center;
         }
 
         .quiz-container {
@@ -27,6 +28,26 @@
             border: white;
             padding: 5px;
         }
+
+  .quiz-buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #0066cc;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d99;
+    }
+
 
         .choice-button {
             width: 40px;
@@ -73,47 +94,54 @@
 </div>
 
     <script>
-let a=Math.floor(Math.random() * 40+1);
-let y=x[a];
+let a=0;
+let y=null;
+var chosen = false;
+function sayButtoning() {
+
+a=Math.floor(Math.random() * 40+1);
+y=x[a];
 document.getElementById("q").innerHTML = y["question"];
 document.getElementById("A").innerHTML = y["answers"]["A"];
 document.getElementById("B").innerHTML = y["answers"]["B"];
 document.getElementById("C").innerHTML = y["answers"]["C"];
 document.getElementById("D").innerHTML = y["answers"]["D"];
-var chosen = false
+chosen = false ;}
+sayButtoning(); 
 document.getElementById("choice1").addEventListener("click", function () {
 	if (chosen) {return;}
 	if (y["correct"]=="A")
-        {document.getElementById("choice-image1").innerText = "O";} 
+        {document.getElementById("A").innerText = "O";} 
 	else
-	{document.getElementById("choice-image1").innerText = "X";}
+	{document.getElementById("A").innerText = "X";}
 	chosen = true; });
 
 document.getElementById("choice2").addEventListener("click", function () {
 	if (chosen) {return;}
 	if (y["correct"]=="B")
-        {document.getElementById("choice-image2").innerText = "O";} 
+        {document.getElementById("B").innerText = "O";} 
 	else
-	{document.getElementById("choice-image2").innerText = "X";}
+	{document.getElementById("B").innerText = "X";}
 	chosen = true; });
 
 document.getElementById("choice3").addEventListener("click", function () {
 	if (chosen) {return;}
 	if (y["correct"]=="C")
-        {document.getElementById("choice-image3").innerText = "O";} 
+        {document.getElementById("C").innerText = "O";} 
 	else 
-	{document.getElementById("choice-image3").innerText = "X";} 
+	{document.getElementById("C").innerText = "X";} 
 	chosen = true; });
 
 document.getElementById("choice4").addEventListener("click", function () {
 	if (chosen) {return;}
 	if (y["correct"]=="D")
-        {document.getElementById("choice-image4").innerText = "O";}
+        {document.getElementById("D").innerText = "O";}
 	else
-	{document.getElementById("choice-image4").innerText = "X";}
+	{document.getElementById("D").innerText = "X";}
 	chosen = true; });
     </script>
-<a href ="q03.html">NEXT</a>
-
+<div class="quiz-buttons">
+<button onclick="sayButtoning()">NEXT</button>
+</div>
 </body>
 </html>
