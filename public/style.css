@@ -13,3 +13,45 @@ h4 {
 h6 {
 	font-size: 14pt;
 }
+
+body {
+            font-family: Arial, sans-serif;
+        }
+
+        .quiz-container {
+            width: 400px;
+            margin: 20px auto;
+            border: white;
+            padding: 15px;
+            background-color: gray;
+        }
+
+        .choices-container {
+            margin-top: 10px;
+        }
+
+        .choice {
+            display: flex;
+            margin-bottom: 8px;
+            background-color: white;
+            border: white;
+            padding: 5px;
+        }
+
+        .choice-button {
+            width: 40px;
+            height: 40px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .choice-image {
+            flex: 1;
+            background-color: white;
+            text-align: center;
+            line-height: 40px;
+            color: #666;
+        }

@@ -4,47 +4,9 @@
 <script src="questions3.js"></script>
     <title>Quiz Question</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .quiz-container {
-            width: 400px;
-            margin: 20px auto;
-            border: white;
-            padding: 15px;
-            background-color: gray;
-        }
-
-        .choices-container {
-            margin-top: 10px;
-        }
-
-        .choice {
-            display: flex;
-            margin-bottom: 8px;
-            background-color: white;
-            border: white;
-            padding: 5px;
-        }
-
-        .choice-button {
-            width: 40px;
-            height: 40px;
-            background-color: lightblue;
-            text-align: center;
-            line-height: 40px;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
-        .choice-image {
-            flex: 1;
-            background-color: white;
-            text-align: center;
-            line-height: 40px;
-            color: #666;
-        }
+        <script src="questions3.js"></script>
+        <title>Quiz Question</title>
+        <link rel="stylesheet" href="style.css">
     </style>
 </head>
 <body>
@@ -113,7 +75,8 @@ document.getElementById("choice4").addEventListener("click", function () {
 	{document.getElementById("choice-image4").innerText = "X";}
 	chosen = true; });
     </script>
-<a href ="q03.html">NEXT</a>
-
+<div class="quiz-buttons">
+<button onclick="sayButtoning()">NEXT</button>
+</div>
 </body>
 </html>
