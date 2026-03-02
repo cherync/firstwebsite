@@ -34,72 +34,50 @@
     </div>
 </div>
 
-    <script>
+<script>
 let a=0;
 let y=null;
 var chosen = false;
+var correct = 0;
+var incorrect = 0;
 function sayButtoning() {
 
-a=Math.floor(Math.random() * 40+1);
-y=x[a];
-document.getElementById("q").innerHTML = y["question"];
-document.getElementById("A").innerHTML = y["answers"]["A"];
-document.getElementById("B").innerHTML = y["answers"]["B"];
-document.getElementById("C").innerHTML = y["answers"]["C"];
-document.getElementById("D").innerHTML = y["answers"]["D"];
-chosen = false ;}
-
-var
-correct=0;
-incorrect=0;
-inntertext="O";
-correct = correct+1
-innertext="X";
-incorrect = incorrect+1;
-sayButtoning(); 
-document.getElementById("choice1").addEventListener("click", function () {
+	a=Math.floor(Math.random() * 40+1);
+	y=x[a];
+	document.getElementById("q").innerHTML = y["question"];
+	document.getElementById("A").innerHTML = y["answers"]["A"];
+	document.getElementById("B").innerHTML = y["answers"]["B"];
+	document.getElementById("C").innerHTML = y["answers"]["C"];
+	document.getElementById("D").innerHTML = y["answers"]["D"];
+	chosen = false ;}
+sayButtoning();
+function verify(c) {
 	if (chosen) {return;}
-	if (y["correct"]=="A")
-        {document.getElementById("A").innerText = "O";
+	if (y["correct"]==c)
+                {document.getElementById(c).innerText = "O";
 		correct=correct+1} 
 	else
-	{document.getElementById("A").innerText = "X";
+	        {document.getElementById(c).innerText = "X";
 		incorrect=incorrect+1}
-	chosen = true; });
-	document.getElementById("o").innerHTML=correct/(correct+incorrect)*100
+	chosen = true; 
+	document.getElementById("o").innerHTML=Math.round(correct/(correct+incorrect)*100)+"%"; 
+}
+
+document.getElementById("choice1").addEventListener("click", function () {
+	verify("A");
+});
 
 document.getElementById("choice2").addEventListener("click", function () {
-	if (chosen) {return;}
-	if (y["correct"]=="B")
-        {document.getElementById("B").innerText = "O";
-		correct=correct+1} 
-	else
-	{document.getElementById("B").innerText = "X";
-		incorrect=incorrect+1}
-	chosen = true; });	
-	document.getElementById("o").innerHTML=correct/(correct+incorrect)*100
+	verify("B");	
+});
 
 document.getElementById("choice3").addEventListener("click", function () {
-	if (chosen) {return;}
-	if (y["correct"]=="C")
-        {document.getElementById("C").innerText = "O";
-		correct=correct+1} 
-	else 
-	{document.getElementById("C").innerText = "X";
-		incorrect=incorrect+1} 
-	chosen = true; });
-	document.getElementById("o").innerHTML=correct/(correct+incorrect)*100
+	verify("C");
+});
 
 document.getElementById("choice4").addEventListener("click", function () {
-	if (chosen) {return;}
-	if (y["correct"]=="D")
-        {document.getElementById("D").innerText = "O";
-		correct=correct+1}
-	else
-	{document.getElementById("D").innerText = "X";
-		incorrect=incorrect+1}
-	chosen = true; });
-	document.getElementById("o").innerHTML=correct/(correct+incorrect)*100
+	verify("D");
+});
     </script>
 <div class="quiz-buttons">
 <button onclick="sayButtoning()">NEXT</button>
