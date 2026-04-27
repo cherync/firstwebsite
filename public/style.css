@@ -3,9 +3,7 @@ h1 {
 }
 h2 {
 	font-size: 60pt;
-}
-h3 {
-	font-size: 36pt;
+
 }
 h4 {
 	font-size: 24pt;
@@ -37,6 +35,21 @@ body {
             border: white;
             padding: 5px;
         }
+
+button {
+   background-color: #0066cc;
+   border: none;
+   color: blue;
+   padding: 12px 20px;
+   margin: 10px;
+   font-size: 16px;
+   border-radius: 8px;
+   cursor: pointer;
+   }
+
+button:hover {
+   background-color: #004d99;
+}
 
         .choice-button {
             width: 40px;
