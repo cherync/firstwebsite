@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="questions2.js"></script>
+    <title>Quiz Question</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+    <h3><div id="q"></div></h3>
+
+    <div class="choices-container">
+        <div class="choice" id="choice1">
+            <div class="choice-button">A</div>
+            <div class="choice-image" id="choice-image1"><div id="A"></div></div>
+        </div>
+        <div class="choice" id="choice2">
+            <div class="choice-button">B</div>
+            <div class="choice-image" id="choice-image2"><div id="B"></div></div>
+        </div>
+        <div class="choice" id="choice3">
+            <div class="choice-button">C</div>
+            <div class="choice-image"  id="choice-image3"><div id="C"></div></div>
+        </div>
+        <div class="choice" id="choice4">
+            <div class="choice-button">D</div>
+            <div class="choice-image"  id="choice-image4"><div id="D"></div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+let a=0;
+let y=null;
+var chosen = false ;
+var correct = 0;
+var incorrect =  0;
+function sayButtoning() {
+
+	a= Math.floor(Math.random() * 40+1);
+	y=x[a];
+	document.getElementById("q").innerHTML = y["question"];
+	document.getElementById("A").innerHTML = y["answers"]["A"];
+	document.getElementById("B").innerHTML = y["answers"]["B"];
+	document.getElementById("C").innerHTML = y["answers"]["C"];
+	document.getElementById("D").innerHTML = y["answers"]["D"];
+	chosen = false ;}
+sayButtoning();
+function verify(c) {
+	if (chosen) {return;}
+	if (y["correct"]==c)
+ 	    {document.getElementById(c).innerText = "O";
+	     correct= correct+1;}
+	else{
+             document.getElementById(c).innerText = "X";
+	     incorrect= incorrect+1;}
+	chosen = true;
+	document.getElementById("o").innerHTML=Math.round(correct/(correct+incorrect)*100)+"%";
+}
+
+
+document.getElementById("choice1").addEventListener("click", function () {
+	verify("A");
+	  
+	    
+});
+document.getElementById("choice2").addEventListener("click", function () {
+	verify("B");
+	   
+}); 
+document.getElementById("choice3").addEventListener("click", function () {
+	verify("C");
+});
+document.getElementById("choice4").addEventListener("click", function () {
+        verify("D");
+});
+</script>
+<div class="quiz-buttons">
+<button onclick="sayButtoning()">next question </button></div>
+
+</body>
+</html>
