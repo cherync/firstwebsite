@@ -1,78 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script src="questions3.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Question</title>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="questions3.js"></script>
 </head>
+
 <body>
 
 <div class="quiz-container">
-    <h3><div id="q"></div></h3>
+
+    <h3 id="q"></h3>
 
     <div class="choices-container">
+
         <div class="choice" id="choice1">
-            <div class="choice-button"id="choice-image1">A</div>
-            <div class="choice-image" id="A">Los Angeles, CA</div>
+            <div class="choice-button" id="choice-image1">A</div>
+            <div class="choice-image" id="A"></div>
         </div>
+
         <div class="choice" id="choice2">
             <div class="choice-button" id="choice-image2">B</div>
-            <div class="choice-image" id="B">San Francisco, CA</div>
+            <div class="choice-image" id="B"></div>
         </div>
+
         <div class="choice" id="choice3">
             <div class="choice-button" id="choice-image3">C</div>
-            <div class="choice-image" id="C">Riverside, CA</div>
+            <div class="choice-image" id="C"></div>
         </div>
+
         <div class="choice" id="choice4">
             <div class="choice-button" id="choice-image4">D</div>
-            <div class="choice-image" id="D">Portland, Oregon</div>
+            <div class="choice-image" id="D"></div>
         </div>
+
     </div>
+
+    <div class="quiz-buttons">
+        <button onclick="loadQuestion()">NEXT</button>
+    </div>
+
 </div>
 
-    <script>
-let a=Math.floor(Math.random() * 40+1);
-let y=x[a];
-document.getElementById("q").innerHTML = y["question"];
-document.getElementById("A").innerHTML = y["answers"]["A"];
-document.getElementById("B").innerHTML = y["answers"]["B"];
-document.getElementById("C").innerHTML = y["answers"]["C"];
-document.getElementById("D").innerHTML = y["answers"]["D"];
-var chosen = false
-document.getElementById("choice1").addEventListener("click", function () {
-	if (chosen) {return;}
-	if (y["correct"]=="A")
-        {document.getElementById("choice-image1").innerText = "O";} 
-	else
-	{document.getElementById("choice-image1").innerText = "X";}
-	chosen = true; });
-
-document.getElementById("choice2").addEventListener("click", function () {
-	if (chosen) {return;}
-	if (y["correct"]=="B")
-        {document.getElementById("choice-image2").innerText = "O";} 
-	else
-	{document.getElementById("choice-image2").innerText = "X";}
-	chosen = true; });
-
-document.getElementById("choice3").addEventListener("click", function () {
-	if (chosen) {return;}
-	if (y["correct"]=="C")
-        {document.getElementById("choice-image3").innerText = "O";} 
-	else 
-	{document.getElementById("choice-image3").innerText = "X";} 
-	chosen = true; });
-
-document.getElementById("choice4").addEventListener("click", function () {
-	if (chosen) {return;}
-	if (y["correct"]=="D")
-        {document.getElementById("choice-image4").innerText = "O";}
-	else
-	{document.getElementById("choice-image4").innerText = "X";}
-	chosen = true; });
-    </script>
-<div class="quiz-buttons">
-<button onclick="sayButtoning()">NEXT</button>
+<div class="score">
+    Correct: <span id="correct">0</span> |
+    Incorrect: <span id="incorrect">0</span> |
+    Accuracy: <span id="o">0%</span>
 </div>
+
+<script>
+
+let currentQuestion;
+let chosen = false;
+
+function loadQuestion() {
+
+    // Reset labels
+    document.getElementById("choice-image1").innerText = "A";
+    document.getElementById("choice-image2").innerText = "B";
+    document.getElementById("choice-image3").innerText = "C";
+    document.getElementById("choice-image4").innerText = "D";
+
+    // Reset colors
+    document.querySelectorAll(".choice").forEach(choice => {
+        choice.style.backgroundColor = "";
+    });
+
+    const randomIndex = Math.floor(Math.random() * x.length);
+
+    currentQuestion = x[randomIndex];
+
+    document.getElementById("q").textContent =
+        currentQuestion.question;
+
+    document.getElementById("A").textContent =
+        currentQuestion.answers.A;
+
+    document.getElementById("B").textContent =
+        currentQuestion.answers.B;
+
+    document.getElementById("C").textContent =
+        currentQuestion.answers.C;
+
+    document.getElementById("D").textContent =
+        currentQuestion.answers.D;
+
+    chosen = false;
+}
+
+function verify(answer) {
+
+    if (chosen) return;
+
+    chosen = true;
+
+    const buttonId =
+        "choice-image" + (answer.charCodeAt(0) - 64);
+
+    if (currentQuestion.correct === answer) {
+
+        document.getElementById(buttonId).innerText = "✓";
+
+        document.getElementById(
+            "choice" + (answer.charCodeAt(0) - 64)
+        ).style.backgroundColor = "#90EE90";
+
+    } else {
+
+        document.getElementById(buttonId).innerText = "✗";
+
+        document.getElementById(
+            "choice" + (answer.charCodeAt(0) - 64)
+        ).style.backgroundColor = "#FFB6B6";
+
+        const correctAnswer = currentQuestion.correct;
+
+        document.getElementById(
+            "choice" + (correctAnswer.charCodeAt(0) - 64)
+        ).style.backgroundColor = "#90EE90";
+    }
+}
+
+document.getElementById("choice1")
+    .addEventListener("click", () => verify("A"));
+
+document.getElementById("choice2")
+    .addEventListener("click", () => verify("B"));
+
+document.getElementById("choice3")
+    .addEventListener("click", () => verify("C"));
+
+document.getElementById("choice4")
+    .addEventListener("click", () => verify("D"));
+
+loadQuestion();
+
+</script>
+
 </body>
 </html>
