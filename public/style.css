@@ -1,70 +1,95 @@
 h1 {
-	font-size: 72pt;
+    font-size: 72pt;
 }
-h2 {
-	font-size: 60pt;
 
+h2 {
+    font-size: 60pt;
 }
+
 h4 {
-	font-size: 24pt;
+    font-size: 24pt;
 }
+
 h6 {
-	font-size: 14pt;
+    font-size: 14pt;
 }
 
 body {
-            font-family: Arial, sans-serif;
-        }
-
-        .quiz-container {
-            width: 400px;
-            margin: 20px auto;
-            border: white;
-            padding: 15px;
-            background-color: gray;
-        }
-
-        .choices-container {
-            margin-top: 10px;
-        }
-
-        .choice {
-            display: flex;
-            margin-bottom: 8px;
-            background-color: white;
-            border: white;
-            padding: 5px;
-        }
-
-button {
-   background-color: #0066cc;
-   border: none;
-   color: blue;
-   padding: 12px 20px;
-   margin: 10px;
-   font-size: 16px;
-   border-radius: 8px;
-   cursor: pointer;
-   }
-
-button:hover {
-   background-color: #004d99;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
-        .choice-button {
-            width: 40px;
-            height: 40px;
-            background-color: lightblue;
-            text-align: center;
-            line-height: 40px;
-            font-weight: bold;
-            margin-right: 8px;
-        }
+.quiz-container {
+    width: 400px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: gray;
+}
 
-        .choice-image {
-            flex: 1;
-            background-color: white;
-            text-align: center;
-            line-height: 40px;
-            color: #666;
-        }
+.choices-container {
+    margin-top: 10px;
+}
+
+.choice {
+    display: flex;
+    margin-bottom: 8px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.choice:hover {
+    background-color: #f0f8ff;
+}
+
+.choice-button {
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    margin-right: 8px;
+    border-radius: 6px;
+}
+
+.choice-image {
+    flex: 1;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    color: #666;
+}
+
+.quiz-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #0066cc;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d99;
+}
+
+.accuracy {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}

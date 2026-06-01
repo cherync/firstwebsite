@@ -2,60 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Korean American History Quiz</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f8f9fa;
+      background-color: #f5f5f5;
       text-align: center;
+      color: #333;
     }
 
     header {
       background-color: #003366;
       color: white;
-      padding: 20px 0;
+      padding: 30px 20px;
     }
 
     h1 {
       margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
     }
 
     .intro {
-      margin: 30px auto;
-      max-width: 600px;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
       font-size: 18px;
-      color: #333;
+      line-height: 1.6;
     }
 
+    .quiz-buttons {
+      max-width: 500px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 0 20px;
+    }
+
+    .quiz-buttons a {
+      text-decoration: none;
+    }
+
+    .quiz-buttons button {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background-color: white;
+      color: #003366;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.2s ease;
+    }
+
+    .quiz-buttons button:hover {
+      background-color: #e8f0ff;
+    }
 
     footer {
-      margin-top: 40px;
+      margin-top: 50px;
       padding: 15px;
       background-color: #eee;
       font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>Korean American History Quiz</h1>
-    <p>Learn & Test Your Knowledge about the history of Korean and America</p>
+    <p>Learn and test your knowledge of Korean American history.</p>
   </header>
 
   <div class="intro">
-    <p>Welcome! This website is here to help you explore and test your knowledge of Korean American history.  
-       Choose a quiz below to get started:</p>
+    <p>
+      Welcome! This website helps you explore Korean American history,
+      culture, and language through a series of quizzes.
+      Select a topic below to get started.
+    </p>
   </div>
 
   <div class="quiz-buttons">
-    <a href="q.html"><button onclick="alert('Start Beginner Quiz')">Korean-American History</button></a>
+    <a href="q.html">
+      <button>Korean American History</button>
+    </a>
 
-    <a href="q02.html"><button onclick="alert('Start Culture/Society Quiz')">Korean-American Culture & Society</button></a>
-   
-    <a href="q3.html"><button onclick="alert('Start Language Quiz')">Korean Language</button></a>
+    <a href="q2.html">
+      <button>Korean American Culture & Society</button>
+    </a>
 
+    <a href="q3.html">
+      <button>Korean Language</button>
+    </a>
   </div>
+
+  <footer>
+    Korean American History Project
+  </footer>
 
 </body>
 </html>
