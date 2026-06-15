@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="questions2.js"></script>
+</head>
+
+<body>
+
+<div class="accuracy">
+    Accuracy: <span id="o">0%</span><br>
+    Correct: <span id="correct">0</span><br>
+    Incorrect: <span id="incorrect">0</span>
+</div>
+
+<div class="quiz-container">
+
+    <h3 id="q"></h3>
+
+    <div class="choices-container">
+
+        <div class="choice" id="choice1">
+            <div class="choice-button" id="choice-image1">A</div>
+            <div class="choice-image" id="A"></div>
+        </div>
+
+        <div class="choice" id="choice2">
+            <div class="choice-button" id="choice-image2">B</div>
+            <div class="choice-image" id="B"></div>
+        </div>
+
+        <div class="choice" id="choice3">
+            <div class="choice-button" id="choice-image3">C</div>
+            <div class="choice-image" id="C"></div>
+        </div>
+
+        <div class="choice" id="choice4">
+            <div class="choice-button" id="choice-image4">D</div>
+            <div class="choice-image" id="D"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="quiz-buttons">
+    <button onclick="loadQuestion()">NEXT</button>
+</div>
+
+<script>
+
+let currentQuestion = null;
+let chosen = false;
+
+let correct = 0;
+let incorrect = 0;
+
+function updateAccuracy() {
+
+document.getElementById("correct").textContent = correct;
+document.getElementById("correct").textContent = correct;
+
+    const total = correct + incorrect;
+
+    if (total === 0) {
+        document.getElementById("o").textContent = "0%";
+        return;
+    }
+
+    document.getElementById("o").textContent =
+        Math.round((correct / total) * 100) + "%";
+
+document.getElementById("incorrect").textContent = incorrect;
+
+
+}
+
+function resetChoices() {
+
+    document.getElementById("choice-image1").textContent = "A";
+    document.getElementById("choice-image2").textContent = "B";
+    document.getElementById("choice-image3").textContent = "C";
+    document.getElementById("choice-image4").textContent = "D";
+
+    document.getElementById("choice1").style.backgroundColor = "";
+    document.getElementById("choice2").style.backgroundColor = "";
+    document.getElementById("choice3").style.backgroundColor = "";
+    document.getElementById("choice4").style.backgroundColor = "";
+
+    chosen = false;
+}
+
+function loadQuestion() {
+
+    resetChoices();
+
+    const randomIndex = Math.floor(Math.random() * x.length);
+
+    currentQuestion = x[randomIndex];
+
+    document.getElementById("q").textContent =
+        currentQuestion.question;
+
+    document.getElementById("A").textContent =
+        currentQuestion.answers.A;
+
+    document.getElementById("B").textContent =
+        currentQuestion.answers.B;
+
+    document.getElementById("C").textContent =
+        currentQuestion.answers.C;
+
+    document.getElementById("D").textContent =
+        currentQuestion.answers.D;
+}
+
+function verify(answer) {
+
+    if (chosen) return;
+
+    chosen = true;
+
+    const answerNumber = answer.charCodeAt(0) - 64;
+
+    if (currentQuestion.correct === answer) {
+
+        document.getElementById(
+            "choice-image" + answerNumber
+        ).textContent = "✓";
+
+        document.getElementById(
+            "choice" + answerNumber
+        ).style.backgroundColor = "#90EE90";
+
+        correct++;
+
+    } else {
+
+        document.getElementById(
+            "choice-image" + answerNumber
+        ).textContent = "✗";
+
+        document.getElementById(
+            "choice" + answerNumber
+        ).style.backgroundColor = "#FFB6B6";
+
+        incorrect++;
+
+        const correctAnswer = currentQuestion.correct;
+        const correctNumber = correctAnswer.charCodeAt(0) - 64;
+
+        document.getElementById(
+            "choice" + correctNumber
+        ).style.backgroundColor = "#90EE90";
+    }
+
+    updateAccuracy();
+}
+
+document.getElementById("choice1")
+    .addEventListener("click", () => verify("A"));
+
+document.getElementById("choice2")
+    .addEventListener("click", () => verify("B"));
+
+document.getElementById("choice3")
+    .addEventListener("click", () => verify("C"));
+
+document.getElementById("choice4")
+    .addEventListener("click", () => verify("D"));
+
+updateAccuracy();
+loadQuestion();
+
+</script>
+
+</body>
+</html>
