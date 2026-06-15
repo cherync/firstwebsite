@@ -55,6 +55,9 @@
 let currentQuestion;
 let chosen = false;
 
+let correctCount = 0;
+let incorrectCount = 0;
+
 function loadQuestion() {
 
     // Reset labels
@@ -91,6 +94,25 @@ function loadQuestion() {
 }
 
 function verify(answer) {
+
+function updateScore() {
+
+    document.getElementById("correct").textContent =
+        correctCount;
+
+    document.getElementById("incorrect").textContent =
+        incorrectCount;
+
+    const total = correctCount + incorrectCount;
+
+    const accuracy =
+        total === 0
+            ? 0
+            : Math.round((correctCount / total) * 100);
+
+    document.getElementById("o").textContent =
+        accuracy + "%";
+}
 
     if (chosen) return;
 
@@ -136,6 +158,8 @@ document.getElementById("choice4")
     .addEventListener("click", () => verify("D"));
 
 loadQuestion();
+
+
 
 </script>
 

@@ -61,6 +61,9 @@ let incorrect = 0;
 
 function updateAccuracy() {
 
+document.getElementById("correct").textContent = correct;
+document.getElementById("correct").textContent = correct;
+
     const total = correct + incorrect;
 
     if (total === 0) {
@@ -70,6 +73,10 @@ function updateAccuracy() {
 
     document.getElementById("o").textContent =
         Math.round((correct / total) * 100) + "%";
+
+document.getElementById("incorrect").textContent = incorrect;
+
+
 }
 
 function resetChoices() {
